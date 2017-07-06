@@ -10,7 +10,7 @@ var greenValue;
 var loadTarget;
 var loadCrystal;
 
-var total = 0;
+var total // = 0;
 
 var options;
 
@@ -46,6 +46,8 @@ var restart = function() {
     console.log("blue value is " + blueValue);
     console.log("yellow value is " + yellowValue);
     console.log("green value is " + greenValue);
+
+    total = 0;
 
 }
 
