@@ -67,7 +67,7 @@ var scoreBoard = function() {
     }
 
 
-    html = "<h2>Hit any key to begin!</h2>" +
+    html = "<h2>Let's play!</h2>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" +
         "<p>target: " + loadTarget + "</p>" +
