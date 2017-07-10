@@ -9,9 +9,14 @@ var greenValue;
 var loadTarget;
 var loadCrystal;
 
-var total 
+var total
 
 var options;
+
+var trombone = new Audio('assets/audio/Sad_Trombone-Joe_Lamb-665429450.wav');
+
+var trumpet = new Audio ('assets/audio/Ta Da-SoundBible.com-1884170640.wav');
+
 
 function targetNumber(min, max) {
     min = Math.ceil(min);
@@ -55,12 +60,12 @@ var scoreBoard = function() {
     if (total == loadTarget) {
         wins = wins + 1;
 
-        // audio.play();
+        trumpet.play();
         restart();
     } else if (total > loadTarget) {
         losses = losses + 1;
 
-        // audio.play();
+        trombone.play();
         restart();
     } else {
         // updateAddition();
@@ -68,43 +73,49 @@ var scoreBoard = function() {
 
 
     html = "<h2>Let's play!</h2>" +
-        "<p>wins: " + wins + "</p>" +
-        "<p>losses: " + losses + "</p>" +
-        "<p>target: " + loadTarget + "</p>" +
-        "<p>score: " + total + "</p>";
+        "<p class= 'wi'>wins: " + wins + "</p>" +
+        "<p class= 'lo'>losses: " + losses + "</p>" +
+        "<p class= 'ta'>target: " + loadTarget + "</p>" +
+        "<p class= 'sc'>score: " + total + "</p>";
 
-    document.getElementById("game").innerHTML = html;
+    //document.getElementById("game").innerHTML = html;
+    $("#game").html(html);
 }
 
-document.onkeyup = function(event) {
+$(document).ready(function() {
 
-    restart();
+$(".btn").on("click", function() {
 
-    scoreBoard();
+        // document.onclick = function(event) {
 
-    $(document).ready(function() {
-        $('#red').click(function() {
-            total = total + redValue;
-            console.log("total value is" + total);
+            restart();
+
             scoreBoard();
-        })
-        $('#blue').click(function() {
-            total = total + blueValue;
-            console.log("total value is" + total);
-            scoreBoard();
-        })
-        $('#yellow').click(function() {
-            total = total + yellowValue;
-            console.log("total value is" + total);
-            scoreBoard();
-        })
-        $('#green').click(function() {
-            total = total + greenValue;
-            console.log("total value is" + total);
-            scoreBoard();
-        })
 
-    });
 
-}
+            $('#red').click(function() {
+                total = total + redValue;
+                console.log("total value is" + total);
+                scoreBoard();
+            });
+            $('#blue').click(function() {
+                total = total + blueValue;
+                console.log("total value is" + total);
+                scoreBoard();
+            });
+            $('#yellow').click(function() {
+                total = total + yellowValue;
+                console.log("total value is" + total);
+                scoreBoard();
+            });
+            $('#green').click(function() {
+                total = total + greenValue;
+                console.log("total value is" + total);
+                scoreBoard();
+            });
+
+        });
+
+  });
+
 

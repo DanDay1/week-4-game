@@ -4,7 +4,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 576px;
+  /*max-width: 960px;*/
   margin: 0 auto;
   clear: both;
  
@@ -15,8 +16,15 @@ body {
  	font-family: helvetica, arial, "New Rail Alphabet", "Galaxie Polaris";
  }
 
+ li {
+ 	font-size: 18px;
+ 	line-height: 24px;
+ 	font-family: helvetica, arial, "New Rail Alphabet", "Galaxie Polaris";
+ }
+
  .crystals {
  float: left;
+  /*width: 53%;*/
   width: 100%;
   /*max-width: 650px;
   padding: 30px;
@@ -27,6 +35,21 @@ body {
 
 }
 
+.wi {
+
+}
+
+.lo {
+
+}
+
+.ta {
+
+}
+
+.sc {
+
+}
  .click {
   width: 80px;
   height: 80px;
@@ -35,3 +58,18 @@ body {
   margin-right: 5px;*/
 }
 
+.btn-default {
+  padding: 15px;
+  background-color: #ccc;
+
+}
+
+.image {
+  /*border: 1px solid red;*/
+  width: 25%;
+  float: left;
+}
+
+.button {
+  text-align: center;
+}
